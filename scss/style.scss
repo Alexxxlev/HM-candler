@@ -1,0 +1,339 @@
+@import "_vars";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Comfortaa', cursive;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  color: $black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+.header {
+  background-color: #FFF8F3;
+
+  &__inner {
+    padding-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  &__btn {
+    width: 30px;
+    height: 25px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent;
+
+    span {
+      width: 100%;
+      height: 1px;
+      background-color: #7B6152;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__list-link {
+    text-transform: uppercase;
+  }
+}
+
+.phone {
+  padding-left: 23px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/phone.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -3px;
+    left: 0;
+  }
+}
+
+.email {
+  margin: 17px 0;
+}
+
+.footer {
+
+  &__inner {
+    padding: 40px 0 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__contacts {
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__social {
+    display: flex;
+    gap: 15px;
+  }
+}
+
+.main {
+  background-color: $pink;
+  overflow-x: clip;
+}
+
+.title {
+  margin-bottom: 15px;
+  font-family: 'Yeseva One', cursive;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.button {
+  padding: 18px 46px;
+  background-color: $yellow;
+  font-weight: 600;
+}
+
+.top {
+  padding: 40px 0 150px;
+
+  &__inner {
+    position: relative;
+  }
+
+  &__content {
+    padding: 150px 0 250px;
+    width: 370px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+    font-size: 30px;
+  }
+
+  &__text {
+    margin-bottom: 48px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__buy {
+    padding: 20px 46px;
+    background-color: $yellow;
+    font-weight: 600;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 240px;
+  }
+}
+
+.about {
+  margin-bottom: 150px;
+  padding: 50px 0;
+  background-color: $beige2;
+  color: $white;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    min-width: 370px;
+  }
+
+  &__text {
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    padding: 0 0 48px 110px;
+    flex-basis: 930px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__item-img {
+    margin-bottom: 10px;
+  }
+
+  &__item-text {
+    font-size: 11px;
+  }
+}
+
+.section {
+  padding-bottom: 150px;
+
+  &--decor {
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 22px;
+      height: 30px;
+      background-image: url(../images/about/decor.png);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $beige1;
+      position: absolute;
+      left: 22px;
+      bottom: 13px;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 370px auto;
+  }
+
+  &__content {
+    padding-bottom: 92px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+  }
+}
+
+.products {
+  &__content {
+    width: 100%;
+    gap: 50px 10px;
+  }
+
+  &__item {
+    margin: 0 auto;
+    max-width: 290px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__item-img {
+    margin-bottom: 8px;
+    width: 100%;
+  }
+
+  &__item-price {
+    margin-bottom: 12px;
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &__item-title {
+    margin-bottom: 16px;
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &__item-text {
+    margin-bottom: 27px;
+    font-size: 12px;
+  }
+}
+
+.steps {
+  &__list {
+    gap: 70px 25px;
+    counter-reset: number;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    list-style-type: none;
+    position: relative;
+
+    &:nth-child(n+10)::before {
+      content: counter(number);
+    }
+
+    &::before {
+      counter-increment: number;
+      content: '0' counter(number);
+      font-family: 'Yeseva One', cursive;
+      font-size: 30px;
+      font-weight: 400;
+      color: $unnamed;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  &__item--even {
+    &::before {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  &__item-text {
+    padding-bottom: 40px;
+    flex-basis: 175px;
+  }
+}
+
+
+
+
+@import "_media";
