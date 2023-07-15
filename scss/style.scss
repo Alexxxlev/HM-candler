@@ -333,6 +333,50 @@ button {
   }
 }
 
+.course {
+  &__content {
+    gap: 20px;
+  }
+
+  &__item-img {
+    margin-bottom: 20px;
+    font-family: 'Yeseva One', cursive;
+    font-size: 11px;
+    color: $white2;
+    position: relative;
+  }
+
+  &__item-title,
+  &__item-time,
+  &__item-price {
+    background-color: $unnamed;
+    position: absolute;
+  }
+
+  &__item-title {
+    padding: 15px;
+    top: 45%;
+    left: -5px;
+  }
+
+  &__item-time {
+    padding: 7px 10px;
+    top: 60%;
+    left: -5px;
+
+    span {
+      font-family: 'Comfortaa', cursive;
+      font-size: 10px;
+    }
+  }
+
+  &__item-price {
+    padding: 20px 10px;
+    right: -10px;
+    bottom: -2px;
+  }
+}
+
 
 
 
